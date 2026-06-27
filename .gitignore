@@ -1,0 +1,18 @@
+# --- Author's private material and full draft history (NOT for publication) ---
+# Contains pre-public drafts, superseded companion docs, internal notes, and the
+# editorial review. Kept locally for reference; never published.
+archive/
+
+# --- Belongs in the separate ducp-protocol/.github repo, not the spec repo ---
+org-profile/
+
+# --- LibreOffice / Microsoft Office lock & temporary files ---
+.~lock.*#
+~$*
+*.tmp
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*~
+*.bak

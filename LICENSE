@@ -1,0 +1,25 @@
+DUCP — License & Rights Notice
+
+Copyright (c) 2026 Pawan Singh. All rights reserved except as expressly granted.
+
+This repository currently contains the DUCP specification and white paper. Those
+documents are licensed under CC BY-NC-ND 4.0 — see LICENSE-DOCS for the terms.
+
+Pre-1.0 rights
+  Until DUCP reaches a stable version 1.0, the author retains all rights in the
+  protocol and specification. Rights to produce, distribute, or commercialize a
+  conforming implementation are reserved. The author intends to designate an
+  open implementation license for a forthcoming reference implementation at
+  v1.0, once the specification is stable.
+
+Contributions
+  Contributions are accepted only under the DUCP Contributor License Agreement
+  (see CLA.md), which assigns the contributed rights to the author so that the
+  protocol's ownership remains unified.
+
+Trademarks
+  "DUCP", "Decentralized Universal Compute Protocol", the 𝕌 / UCU mark, and
+  associated names and logos are trademarks of the author. No trademark rights
+  are granted by any license in this repository.
+
+This notice is informational only and is not legal advice.

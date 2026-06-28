@@ -21,15 +21,24 @@ DUCP exists to accelerate technological evolution and the advancement of intelli
 - [**DUCP White Paper v0.1.0 (PDF)**](whitepaper/DUCP_White_Paper_v0.1.0.pdf) — current, first public release
 - [DUCP White Paper v0.1.0 (DOCX)](whitepaper/DUCP_White_Paper_v0.1.0.docx) — editable source
 
-Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals.
+Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quant/) — the companion Quant (ℚ) standard · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals.
 
 **Versioning.** The public history begins at **0.1.0**. DUCP uses semantic versioning adapted for a specification: `0.MINOR.PATCH` during the pre-implementation phase (MINOR for substantive accepted revisions, PATCH for editorial fixes); **1.0.0 is reserved** for a specification frozen against a working reference implementation and a public testnet. The drafts that preceded this release were private and solo; nothing in DUCP's public history predates 0.1.0. See [CHANGELOG.md](CHANGELOG.md).
+
+## Companion Standard: The Quant (ℚ)
+
+DUCP ships with a companion standard, the **Quant (ℚ)** — a substrate-independent unit of *computational energy efficiency*, benchmarked against the Landauer limit. It is the second axis of a **two-axis model of computation**: where **𝕌** measures *how much* useful work was delivered (the metered, rewarded unit), **ℚ** measures *how cleanly* — recorded per task as a **reward-neutral** observable, measured and made legible but never affecting payment. The Quant stands on its own as an efficiency unit usable beyond DUCP (Green500 entrants, sustainability-bound buyers, hardware vendors); the protocol is its first reference adopter.
+
+- [**The Quant (ℚ) — Standard Proposal v0.4 (PDF)**](quant/Quant_Standard_v0.4.pdf) · [Markdown source](quant/Quant_Standard_v0.4.md) · [companion overview](quant/)
+
+The two couple through reward-neutrality, a shared Benchmark Node baseline, the **Sealed Power Proof** (how ℚ is recorded trustlessly when per-task energy can't be both confidential and attested), and a joint vendor-locked-power-register hardware ask. See [`quant/`](quant/).
 
 ## Core Concepts
 
 | Concept | Description |
 |---|---|
 | **𝕌 (Universal Compute Unit)** | The atomic measure of computation and the native currency. One 𝕌 = a quantity of information processed, scaled by a reference benchmark (information per standard joule). Same work → same 𝕌 on any hardware. Symbol 𝕌 (logogram); written **UCU** in plain text; spoken "the U." |
+| **ℚ (Quant)** | The *companion* unit of compute **efficiency** — useful information resolved per joule, normalized to a reference and to operating temperature, benchmarked against the Landauer limit. The quality axis to 𝕌's quantity axis; recorded per task as a **reward-neutral** observable. See the [companion standard](quant/). |
 | **Unit-is-Currency** | 𝕌 *is* the money — no separate token. Verified work mints 𝕌, and 1 𝕌 is always redeemable for its defined quantum of compute, making 𝕌 a stable, work-backed numéraire that strengthens as compute demand grows. |
 | **The DVM** | The DUCP Virtual Machine — the standard execution environment every task runs inside; deterministic and portable, so 𝕌 is metered identically on any machine. |
 | **Standing** | A *non-transferable*, earned reputation (distinct from 𝕌 money — it cannot be bought). Earned through verified work, reliability, efficiency, and good citizenship; it drives stake discounts, routing priority, resilience, and governance weight. |
@@ -112,7 +121,7 @@ DUCP is published openly for reading, citation, and contribution, while **owners
 - **White paper & specification** — [CC BY-NC-ND 4.0](LICENSE-DOCS): read, share, and cite the verbatim, attributed document for non-commercial purposes; no derivatives or commercial use without written permission.
 - **Implementation rights (pre-1.0)** — reserved; an open implementation license is intended at v1.0. See [LICENSE](LICENSE).
 - **Contributions** — accepted only under the [DUCP CLA](CLA.md).
-- **Trademarks** — "DUCP," "Decentralized Universal Compute Protocol," and the 𝕌 / UCU mark are trademarks of the author.
+- **Trademarks** — "DUCP," "Decentralized Universal Compute Protocol," the 𝕌 / UCU mark, "Quant," and the Quant (ℚ) mark are trademarks of the author.
 
 *This summary is informational, not legal advice; the license, CLA, and trademark position are intended for review by counsel before publication.*
 

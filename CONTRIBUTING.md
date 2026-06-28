@@ -60,9 +60,11 @@ open an issue labelled **`proposal`** that states:
 
 Proposals are discussed publicly. The maintainer summarizes the outcome and, if
 accepted, the change is versioned per the policy in the white paper
-(MINOR bump for substantive changes, PATCH for editorial fixes). Changes to the
-protocol's locked identity are reserved to the v1.0 process and the constitution
-described in §12.
+(MINOR bump for substantive changes, PATCH for editorial fixes). Changes that touch
+the protocol's identity-level commitments are weighed especially carefully and made in
+the open; during the pre-1.0 phase they remain within the steward's authority. The
+constitutional lock that protects that identity against future on-chain governance
+takes effect at v1.0 (§12).
 
 ## Versioning
 

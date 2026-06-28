@@ -7,11 +7,17 @@ on-chain governance.
 
 ## Guiding principle
 
-DUCP's own design principle applies to the project as well: **identity locked,
-mechanics flexible.** What the protocol *is* — its purpose, its core values, the
-definition of the unit, work-backing, unit-is-currency, non-transferable
-reputation, and democratic self-rule — is meant to be stable. How it is run can
-evolve.
+DUCP's design principle — **identity locked, mechanics flexible** — describes the
+protocol's *destination*. At and after v1.0, the constitution locks what the protocol
+*is* — its purpose, core values, the definition of the unit, work-backing,
+unit-is-currency, non-transferable reputation, and democratic self-rule — while leaving
+mechanics tunable through on-chain governance.
+
+**During the pre-1.0 phase the design is still being shaped, so nothing is
+constitutionally locked yet.** The steward may revise any part of the protocol —
+including its identity-level commitments — in the open; the lock takes effect only with
+the v1.0 constitution. The identity above is what the protocol *intends* to lock at v1.0
+and treats as stable in the meantime — a signal to build on, not a pre-1.0 handcuff.
 
 ## Phase 1 — Pre-1.0: single steward
 
@@ -19,7 +25,10 @@ While DUCP is pre-1.0, the project is governed by a single steward.
 
 - **Steward / maintainer:** Pawan Singh (the author).
 - **Authority:** The steward holds final decision authority over the
-  specification, the white paper, the roadmap, licensing, and the marks.
+  specification, the white paper, the roadmap, licensing, and the marks — and,
+  because the design is not yet frozen, over the protocol's identity-level
+  commitments as well. No part of the protocol is locked against revision during
+  this phase; the locked core begins at v1.0 (Phase 2).
 - **Why:** A coherent protocol identity is easier to shape with one hand on the
   tiller before the design is frozen. This is a deliberate, time-bounded phase,
   not the protocol's end state.

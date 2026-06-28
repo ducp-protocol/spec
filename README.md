@@ -21,7 +21,9 @@ DUCP exists to accelerate technological evolution and the advancement of intelli
 - [**DUCP White Paper v0.2.0 (PDF)**](whitepaper/DUCP_White_Paper_v0.2.0.pdf) — current
 - [DUCP White Paper v0.2.0 (DOCX)](whitepaper/DUCP_White_Paper_v0.2.0.docx) — editable source
 
-Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quant/) — the companion Quant (ℚ) standard · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals.
+Prior public releases are kept in [`releases/`](releases/).
+
+Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quant/) — the companion Quant (ℚ) standard · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals · [`releases/`](releases/) — published releases.
 
 **Versioning.** The public history begins at **0.1.0**. DUCP uses semantic versioning adapted for a specification: `0.MINOR.PATCH` during the pre-implementation phase (MINOR for substantive accepted revisions, PATCH for editorial fixes); **1.0.0 is reserved** for a specification frozen against a working reference implementation and a public testnet. The drafts that preceded this release were private and solo; nothing in DUCP's public history predates 0.1.0. See [CHANGELOG.md](CHANGELOG.md).
 

@@ -1,6 +1,6 @@
 # Profile 0 — 03 · Verification (Sampled Re-execution)
 
-- DUCP-SPEC 0.1.0 · Profile 0 · See [README](README.md) · normative parent [../03](../03-verification.md)
+- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parent [../03](../03-verification.md)
 
 Profile 0 has exactly one verification tier — **sampled re-execution** — which the DVM assigns to every task at submit (`I-VERIFY-NOCHOICE`; TEE/ZK are reserved tiers). Because the DVM is deterministic ([02](02-dvm-and-metering.md)), re-execution is an **exact** check: re-run on the same `{module, input, benchmark}` and compare the `result_hash` and `ucu_count` byte-for-byte. Crate: `ducp-verification`.
 

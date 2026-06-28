@@ -1,6 +1,6 @@
 # Profile 0 — 02 · The DVM (WebAssembly) & Metering
 
-- DUCP-SPEC 0.1.0 · Profile 0 · See [README](README.md) · normative parent [../02](../02-dvm.md)
+- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parent [../02](../02-dvm.md)
 
 The Profile 0 DVM is a **deterministic WebAssembly runtime** that executes a task once and derives its 𝕌 count by fuel metering. Reference runtime: **wasmtime** (Rust). Crate: `ducp-dvm`.
 

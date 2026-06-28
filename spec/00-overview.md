@@ -1,7 +1,7 @@
 # DUCP Specification — Overview & Conventions
 
 - **Spec ID:** DUCP-SPEC
-- **Version:** 0.1.0 (Draft) — tracks white paper v0.1.0
+- **Version:** 0.2.0 (Draft) — tracks white paper v0.2.0
 - **Status:** Draft. Normative requirements are stated with the keywords in §2. Items the design has not yet settled are flagged explicitly as **Open**. This specification is **not frozen**; version **1.0.0** is reserved for a specification frozen against a working reference implementation and a public testnet.
 
 ## 1. Scope

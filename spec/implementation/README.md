@@ -1,6 +1,6 @@
 # DUCP Reference Node — Implementation Specification (Profile 0)
 
-- Spec: **DUCP-SPEC 0.1.0** · Implementation **Profile 0** (MVP / devnet)
+- Spec: **DUCP-SPEC 0.2.0** · Implementation **Profile 0** (MVP / devnet)
 - Status: **Draft, build-ready.** Defines a concrete, buildable subset of DUCP sufficient to stand up a working node and a devnet/testnet, end to end (submit → execute → verify → settle) with real 𝕌 and Standing accounting.
 - Companion: the normative spec ([../00–08](../00-overview.md)) defines *what must hold*; this profile defines *what to build first* without violating it.
 

@@ -7,10 +7,10 @@
 
 <p align="center"><em>Democratizing Sustainable Compute to Power Technological Evolution</em></p>
 
-> **Status:** First public release — **v0.1.0** (June 2026), published as a
-> Request for Comments. A design seeking scrutiny and collaborators, not a
-> shipped system. Open to contribution; owned and stewarded by its author
-> through the pre-1.0 phase.
+> **Status:** Current release — **v0.2.0** (June 2026), a Request for Comments
+> that brings the Quant (ℚ) into the protocol as a reward-neutral observable
+> (DP-0001). A design seeking scrutiny and collaborators, not a shipped system.
+> Open to contribution; owned and stewarded by its author through the pre-1.0 phase.
 
 **An open, trustless protocol that mobilizes the world's compute into one market and makes it a democratized, sustainable abundance — where verified work is the currency, efficiency is rewarded by the market, and governance is earned reputation rather than wealth.**
 
@@ -18,8 +18,9 @@ DUCP exists to accelerate technological evolution and the advancement of intelli
 
 ## White Paper
 
-- [**DUCP White Paper v0.1.0 (PDF)**](whitepaper/DUCP_White_Paper_v0.1.0.pdf) — current, first public release
-- [DUCP White Paper v0.1.0 (DOCX)](whitepaper/DUCP_White_Paper_v0.1.0.docx) — editable source
+- [**DUCP White Paper v0.2.0 (PDF)**](whitepaper/DUCP_White_Paper_v0.2.0.pdf) — current
+- [DUCP White Paper v0.2.0 (DOCX)](whitepaper/DUCP_White_Paper_v0.2.0.docx) — editable source
+- [v0.1.0 (PDF)](whitepaper/DUCP_White_Paper_v0.1.0.pdf) — prior (first public release)
 
 Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quant/) — the companion Quant (ℚ) standard · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals.
 
@@ -135,5 +136,5 @@ DUCP is published openly for reading, citation, and contribution, while **owners
 
 ```
 Singh, P. (2026). "Decentralized Universal Compute Protocol (DUCP):
-Technical White Paper." Version 0.1.0, June 2026.
+Technical White Paper." Version 0.2.0, June 2026.
 ```

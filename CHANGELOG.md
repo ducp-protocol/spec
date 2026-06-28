@@ -8,17 +8,28 @@ testnet.
 
 The format is loosely based on the "Keep a Changelog" convention.
 
-## [Unreleased]
+## [0.2.0] — 2026-06 — ℚ woven into the protocol
 
-### Planned — 0.2.0: ℚ woven into the protocol (DP-0001)
-- Bring ℚ into the protocol as a **reward-neutral genesis observable** per
-  [DP-0001](proposals/0001-record-q-as-genesis-observable.md): the **(𝕌, ℚ)** record
-  pair; an optional **Power Seal** field on the Compute Proof; the on-chain **ℚ-ledger**;
-  **seal grades** S0/S1/S2; three gated **Verifier checks**; the **Benchmark Node** as
-  ℚ-baseline authority; and a **reward-neutral invariant** binding from genesis (declaratory
-  of existing locked identity; formal constitutional lock reserved to v1.0). Substantive
-  change (MINOR bump) — lands as white paper **v0.2.0** plus matching
-  `spec/` docs and `ducp-node-rs` changes.
+Brings the Quant (ℚ) into the protocol as a **reward-neutral genesis observable**
+(proposal [DP-0001](proposals/0001-record-q-as-genesis-observable.md), Accepted).
+
+### Added
+- **DP-0001** (Accepted): record ℚ as a reward-neutral observable — the **(𝕌, ℚ)**
+  record pair; an optional **Power Seal** energy attestation on the Compute Proof; the
+  on-chain **ℚ-ledger**; **seal grades** S0/S1/S2 + comparability; three gated
+  **Verifier checks**; and the **reward-neutral invariant** (binding from genesis as a
+  steward commitment; formal constitutional lock at v1.0).
+- **`spec/09-efficiency-observable.md`** (Draft): the normative spec resolving the
+  recording side of the energy-attestation open items (`00`/`03`/`05`), with `I-Q-*`
+  invariants and a conformance vector.
+
+### Changed
+- **White paper → v0.2.0**: folds ℚ in without renumbering — a new **§6.5 "The Second
+  Axis: Quality (ℚ)"** and an expanded **§8.1** naming ℚ, the Power Seal, and the
+  ℚ-ledger; front matter, status, and citation bumped to 0.2.0.
+- Governance reconciled for the pre-1.0 phase: nothing is constitutionally locked yet;
+  the steward may revise any part, including identity; the locked core begins at v1.0
+  (`GOVERNANCE.md`, `CONTRIBUTING.md`).
 
 ## [0.1.1] — 2026-06 — Quant companion
 

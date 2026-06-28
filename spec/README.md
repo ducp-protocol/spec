@@ -19,6 +19,7 @@ This is a **Draft**. Requirements are normative where stated with RFC-2119 keywo
 | [06](06-task-lifecycle.md) | Task Lifecycle | the five stages, failure, patterns (§11) |
 | [07](07-governance.md) | Governance & Constitution | chambers, weighting, locked core (§12) |
 | [08](08-security.md) | Security Model | threats, defenses, invariants (§13) |
+| [09](09-efficiency-observable.md) | The Efficiency Observable (ℚ) | reward-neutral ℚ recording & energy attestation (DP-0001; §§6/8/9 → v0.2.0) |
 
 All documents are currently **Draft**. Each ends with an **Open items** section listing what remains.
 

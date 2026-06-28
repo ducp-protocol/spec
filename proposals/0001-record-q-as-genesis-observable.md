@@ -1,6 +1,6 @@
 # DP-0001: Record ℚ as a Reward-Neutral Genesis Observable
 
-- Status:   Draft
+- Status:   Accepted (2026-06-28, by the steward)
 - Author(s): Pawan Singh
 - Created:  2026-06-28
 - Affects:  white paper (→ v0.2.0), `spec/`, `ducp-node-rs`; constitution (formal lock at v1.0)

@@ -27,6 +27,6 @@
   <rect x="66" y="474" width="132" height="7" rx="3.5" fill="#43D58C"/>
 
   <!-- footer -->
-  <text x="64" y="566" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="1" fill="#86C7FF">First public draft · v0.1.0 · Request for Comments</text>
+  <text x="64" y="566" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="1" fill="#86C7FF">Request for Comments · v0.2.0 · June 2026</text>
   <text x="64" y="600" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" letter-spacing="1" fill="#9DB8D0">github.com/ducp-protocol</text>
 </svg>

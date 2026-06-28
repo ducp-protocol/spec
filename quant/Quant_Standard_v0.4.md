@@ -148,7 +148,7 @@ An AI assistant was used for drafting, equation formatting, and figure generatio
 
 [8] Green Software Foundation, "Software Carbon Intensity (SCI)," ISO/IEC 21031:2024.
 
-[9] P. Singh, "Decentralized Universal Compute Protocol (DUCP): Technical White Paper," v0.1.0, 2026.
+[9] P. Singh, "Decentralized Universal Compute Protocol (DUCP): Technical White Paper," v0.2.0, 2026.
 
 [10] C. E. Shannon, "A Mathematical Theory of Communication," 1948.
 

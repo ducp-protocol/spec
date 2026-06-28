@@ -1,6 +1,6 @@
 # 04 — Economics & Settlement
 
-- Spec: DUCP-SPEC 0.1.0 (Draft) · See [00 — Conventions](00-overview.md)
+- Spec: DUCP-SPEC 0.2.0 (Draft) · See [00 — Conventions](00-overview.md)
 
 ## 1. Supply: work-minted and elastic
 

@@ -1,6 +1,6 @@
 # 09 — The Efficiency Observable (ℚ)
 
-- Spec: DUCP-SPEC 0.1.0 (Draft) · introduced by [DP-0001](../proposals/0001-record-q-as-genesis-observable.md) · lands with white paper **v0.2.0** · See [00 — Conventions](00-overview.md)
+- Spec: DUCP-SPEC 0.2.0 (Draft) · introduced by [DP-0001](../proposals/0001-record-q-as-genesis-observable.md) · lands with white paper **v0.2.0** · See [00 — Conventions](00-overview.md)
 
 ## 1. Purpose and scope
 

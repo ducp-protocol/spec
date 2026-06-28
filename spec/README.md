@@ -1,6 +1,6 @@
 # DUCP Specification
 
-The normative DUCP specification — **DUCP-SPEC v0.1.0 (Draft)** — formalized from the white paper into modular, versioned documents. Start with **[00 — Overview & Conventions](00-overview.md)**.
+The normative DUCP specification — **DUCP-SPEC v0.2.0 (Draft)** — formalized from the white paper into modular, versioned documents. Start with **[00 — Overview & Conventions](00-overview.md)**.
 
 ## Status
 

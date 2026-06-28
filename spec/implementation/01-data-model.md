@@ -1,6 +1,6 @@
 # Profile 0 — 01 · Data Model & Encoding
 
-- DUCP-SPEC 0.1.0 · Profile 0 · See [README](README.md)
+- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md)
 
 Types are shown in Rust syntax for precision; they define the **canonical data model** every conforming node shares (crate `ducp-types`). Field encodings are normative for interoperability.
 

@@ -1,6 +1,6 @@
 # 02 — The DVM (DUCP Virtual Machine)
 
-- Spec: DUCP-SPEC 0.1.0 (Draft) · See [00 — Conventions](00-overview.md)
+- Spec: DUCP-SPEC 0.2.0 (Draft) · See [00 — Conventions](00-overview.md)
 
 ## 1. Scope
 

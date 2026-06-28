@@ -1,6 +1,6 @@
 # 07 — Governance & Constitution
 
-- Spec: DUCP-SPEC 0.1.0 (Draft) · See [00 — Conventions](00-overview.md)
+- Spec: DUCP-SPEC 0.2.0 (Draft) · See [00 — Conventions](00-overview.md)
 
 > **Phase note.** This document specifies the protocol's *target* on-chain governance. During the pre-1.0 phase the project is steered by its maintainer (see the repository `GOVERNANCE.md`); the mechanism below is what DUCP adopts at and after **1.0.0**.
 

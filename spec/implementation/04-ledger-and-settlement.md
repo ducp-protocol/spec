@@ -1,6 +1,6 @@
 # Profile 0 — 04 · Ledger, Settlement & Consensus
 
-- DUCP-SPEC 0.1.0 · Profile 0 · See [README](README.md) · normative parents [../04](../04-economics.md), [../07](../07-governance.md)
+- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parents [../04](../04-economics.md), [../07](../07-governance.md)
 
 The ledger is a deterministic state machine; the consensus engine orders transactions into blocks and replicates the same transition on every node. Crates: `ducp-ledger`, `ducp-consensus`.
 

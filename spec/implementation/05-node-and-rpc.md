@@ -1,6 +1,6 @@
 # Profile 0 — 05 · Node, RPC, Parameters & Test Vectors
 
-- DUCP-SPEC 0.1.0 · Profile 0 · See [README](README.md)
+- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md)
 
 ## 1. Node components (`ducp-node`)
 

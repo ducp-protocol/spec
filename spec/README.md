@@ -22,6 +22,10 @@ This is a **Draft**. Requirements are normative where stated with RFC-2119 keywo
 
 All documents are currently **Draft**. Each ends with an **Open items** section listing what remains.
 
+## Implementation (build-ready)
+
+A concrete **Profile 0** (MVP / devnet) implementation specification lives in **[`implementation/`](implementation/)**. It pins the buildable choices — **WebAssembly** IR, **single-sequencer devnet**, **sampled re-execution** — preserves every invariant above, puts TEE/ZK/energy/BFT behind interfaces, and maps directly onto the [`ducp-node-rs`](https://github.com/ducp-protocol/ducp-node-rs) crates with a milestone roadmap (M0–M6) and conformance test vectors. Start at [`implementation/README.md`](implementation/README.md). This is the document to build the reference node from.
+
 ## How to contribute
 
 Substantive changes start as a proposal in [`../proposals/`](../proposals/) and follow [`../CONTRIBUTING.md`](../CONTRIBUTING.md). The highest-value work is in the **Open items** — especially the executable **DVM reference**, the **metering/benchmark** formalization, **trustless energy attestation**, and the **formal security analysis** (sampling, slashing, the wash-trading bound). These gate **1.0.0**.

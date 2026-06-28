@@ -20,7 +20,6 @@ DUCP exists to accelerate technological evolution and the advancement of intelli
 
 - [**DUCP White Paper v0.2.0 (PDF)**](whitepaper/DUCP_White_Paper_v0.2.0.pdf) — current
 - [DUCP White Paper v0.2.0 (DOCX)](whitepaper/DUCP_White_Paper_v0.2.0.docx) — editable source
-- [v0.1.0 (PDF)](whitepaper/DUCP_White_Paper_v0.1.0.pdf) — prior (first public release)
 
 Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quant/) — the companion Quant (ℚ) standard · [`spec/`](spec/) — the formal specification (in progress) · [`proposals/`](proposals/) — change proposals.
 

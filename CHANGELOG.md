@@ -78,5 +78,3 @@ comments.
 - The revisions that preceded this release (2024–2026) were **private design
   iterations** by the author and are archived for historical interest only. This
   release supersedes them; nothing in DUCP's public history predates 0.1.0.
-
-[0.1.0]: ./whitepaper/DUCP_White_Paper_v0.1.0.docx

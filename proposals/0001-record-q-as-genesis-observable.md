@@ -4,7 +4,7 @@
 - Author(s): Pawan Singh
 - Created:  2026-06-28
 - Affects:  white paper (→ v0.2.0), `spec/`, `ducp-node-rs`; constitution (formal lock at v1.0)
-- Companion: [The Quant (ℚ) Standard v0.4](../quant/Quant_Standard_v0.4.md)
+- Companion: [The Quant (ℚ) Standard v0.1.0](../quant/Quant_Standard_v0.1.0.md)
 
 ## Summary
 
@@ -14,7 +14,7 @@ What ships at genesis is the *schema and ledger*, not efficiency-based rewards: 
 
 ## Motivation
 
-**Energy is the binding constraint, and the protocol is silent on it.** Data centers drew ~415 TWh in 2024 (~1.5% of world electricity), projected to ~945 TWh (~3%) by 2030 [Quant §1]. Efficiency — useful work per joule — is the figure that decides how much computation can be deployed. Yet DUCP v0.1.0 treats efficiency only abstractly: §8.1 ("Efficiency Lives in the Reward Layer, Never the Unit") rewards it indirectly through routing and Standing, but the protocol records *nothing* about energy-per-useful-bit. The Quant standard (companion, v0.4) defines a substrate-independent efficiency unit — but nothing in the protocol records it.
+**Energy is the binding constraint, and the protocol is silent on it.** Data centers drew ~415 TWh in 2024 (~1.5% of world electricity), projected to ~945 TWh (~3%) by 2030 [Quant §1]. Efficiency — useful work per joule — is the figure that decides how much computation can be deployed. Yet DUCP v0.1.0 treats efficiency only abstractly: §8.1 ("Efficiency Lives in the Reward Layer, Never the Unit") rewards it indirectly through routing and Standing, but the protocol records *nothing* about energy-per-useful-bit. The Quant standard (companion; public v0.1.0, developed through internal draft v0.4) defines a substrate-independent efficiency unit — but nothing in the protocol records it.
 
 **No comparable network records this.** Surveyed decentralized-compute systems verify correctness, storage, or output quality; none records consumed-energy-per-useful-bit. A populated ℚ-ledger is a distinctive, defensible capability and the data substrate for verified-green-compute markets.
 
@@ -51,7 +51,7 @@ The Power Seal records *configuration* (an attested power cap), **not** data-dep
 
 ### 3. Computing ℚ (the Sealed Power Proof)
 
-Where a valid Power Seal is present, the protocol computes ℚ deterministically from the [Quant v0.4 operational definition](../quant/Quant_Standard_v0.4.md):
+Where a valid Power Seal is present, the protocol computes ℚ deterministically from the [Quant v0.1.0 operational definition](../quant/Quant_Standard_v0.1.0.md):
 
 ```
 ℚ ≡ (C × E_baseline × T_std) / (E_consumed × T)
@@ -124,7 +124,7 @@ All four earn identical 𝕌; ℚ differs (and is `null` for D, with no penalty)
 
 ### Sections touched
 
-- **White paper → v0.2.0 (MINOR):** a new front-of-paper "Two Axes of Compute" section (𝕌 + ℚ as one system); ℚ's reward-neutral genesis role woven into the unit (§6), verification (§9), economics (§10), and governance/constitution (§12) sections. Cites Quant v0.4.
+- **White paper → v0.2.0 (MINOR):** a new front-of-paper "Two Axes of Compute" section (𝕌 + ℚ as one system); ℚ's reward-neutral genesis role woven into the unit (§6), verification (§9), economics (§10), and governance/constitution (§12) sections. Cites Quant v0.1.0 (public release).
 - **`spec/`:** a new normative `09-efficiency-observable.md`, paired with `01-unit.md`.
 - **`ducp-node-rs`:** optional `power_seal` on the proof types (`dvm`); the three gated checks (`verification`); the ℚ column + null semantics + CID evidence (`ledger`); Benchmark Node baseline publication.
 

@@ -31,7 +31,9 @@ Repository layout: [`whitepaper/`](whitepaper/) — the paper · [`quant/`](quan
 
 DUCP ships with a companion standard, the **Quant (ℚ)** — a substrate-independent unit of *computational energy efficiency*, benchmarked against the Landauer limit. It is the second axis of a **two-axis model of computation**: where **𝕌** measures *how much* useful work was delivered (the metered, rewarded unit), **ℚ** measures *how cleanly* — recorded per task as a **reward-neutral** observable, measured and made legible but never affecting payment. The Quant stands on its own as an efficiency unit usable beyond DUCP (Green500 entrants, sustainability-bound buyers, hardware vendors); the protocol is its first reference adopter.
 
-- [**The Quant (ℚ) — Standard Proposal v0.4 (PDF)**](quant/Quant_Standard_v0.4.pdf) · [Markdown source](quant/Quant_Standard_v0.4.md) · [companion overview](quant/)
+- [**The Quant (ℚ) — Standard v0.1.0 (PDF)**](quant/Quant_Standard_v0.1.0.pdf) · [Markdown source](quant/Quant_Standard_v0.1.0.md) · [companion overview](quant/) · **RFC**
+
+The Quant is published as an open **Request for Comments & Collaboration** — critique and validated benchmark data especially welcome; comment via [`quant`-labelled issues](https://github.com/ducp-protocol/spec/issues?q=label%3Aquant).
 
 The two couple through reward-neutrality, a shared Benchmark Node baseline, the **Sealed Power Proof** (how ℚ is recorded trustlessly when per-task energy can't be both confidential and attested), and a joint vendor-locked-power-register hardware ask. See [`quant/`](quant/).
 

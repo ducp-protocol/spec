@@ -25,7 +25,6 @@ header-includes: |
   \newunicodechar{→}{\ensuremath{\rightarrow}}
   \newunicodechar{∝}{\ensuremath{\propto}}
   \newunicodechar{−}{\ensuremath{-}}
-  \hypersetup{pdftitle={The Quant (Q): A Standard for Measuring Computational Energy Efficiency},pdfauthor={Pawan Singh}}
 ---
 
 *Keywords: compute energy efficiency, Landauer limit, Shannon entropy, performance-per-watt, Green500, confidential computing, sustainable computing.*

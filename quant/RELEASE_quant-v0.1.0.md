@@ -22,7 +22,3 @@ v0.2.0 is the first reference adopter (DP-0001, `spec/09`).
 Open an issue with the [`quant`](https://github.com/ducp-protocol/spec/issues?q=label%3Aquant) label, or email mr.singhpawan@gmail.com.
 
 Validated benchmark data, measurement-boundary proposals, and adversarial critique are especially welcome.
-
-## Note on PDF
-
-If the PDF front matter still shows an internal draft version, re-export from the Markdown source when a PDF toolchain is available.

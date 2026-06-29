@@ -4,7 +4,7 @@
 
 ## 1. Purpose and scope
 
-**1.1** This document resolves the **ℚ-style energy-metering** open item ([00](00-overview.md), [03 §2.1](03-verification.md), [05 §2.2](05-standing.md)) by specifying how DUCP records the **Quant (ℚ)** — a substrate-independent measure of computational energy efficiency — as a **reward-neutral observable**. The unit's definition, bounds, and scaling laws are normative in the companion [Quant Standard v0.4](../quant/Quant_Standard_v0.4.md); this document specifies only how the protocol records ℚ and what may read it.
+**1.1** This document resolves the **ℚ-style energy-metering** open item ([00](00-overview.md), [03 §2.1](03-verification.md), [05 §2.2](05-standing.md)) by specifying how DUCP records the **Quant (ℚ)** — a substrate-independent measure of computational energy efficiency — as a **reward-neutral observable**. The unit's definition, bounds, and scaling laws are normative in the companion [Quant Standard v0.1.0](../quant/Quant_Standard_v0.1.0.md); this document specifies only how the protocol records ℚ and what may read it.
 
 **1.2** ℚ is the **quality axis** to 𝕌's quantity axis ([01](01-unit.md)): 𝕌 measures *how much* logical work was performed; ℚ measures *how cleanly* (useful work per normalized joule). Recording ℚ MUST NOT change how 𝕌 is metered, minted, or settled (`I-UNIT-ENERGYFREE`).
 
@@ -22,11 +22,11 @@
 
 **3.2** When present, a Power Seal MUST carry: `seal_grade` (§5), `boundary` (§5), the attested static `power_cap`, the observed completion `window`, the rated maximum junction temperature `T_max`, `attestation_evidence` binding the seal to a hardware root of trust **and** to the Task Hash (bulky evidence referenced by content address, not stored inline, §7), and the `benchmark` version ([01 §4.4](01-unit.md)) under which ℚ is computed.
 
-**3.3** The Power Seal MUST attest **configuration** (a static power cap), not data-dependent power telemetry, so that it is side-channel-safe and signable by existing roots of trust ([Quant §6](../quant/Quant_Standard_v0.4.md)). This is what lets energy attestation ride the TEE tier without reopening the confidentiality–attestation tension noted in [03 §5](03-verification.md).
+**3.3** The Power Seal MUST attest **configuration** (a static power cap), not data-dependent power telemetry, so that it is side-channel-safe and signable by existing roots of trust ([Quant §6](../quant/Quant_Standard_v0.1.0.md)). This is what lets energy attestation ride the TEE tier without reopening the confidentiality–attestation tension noted in [03 §5](03-verification.md).
 
 ## 4. Computing ℚ
 
-**4.1** Where a Power Seal is present and valid (§6), the protocol MUST compute ℚ deterministically per the [Quant Standard §3](../quant/Quant_Standard_v0.4.md):
+**4.1** Where a Power Seal is present and valid (§6), the protocol MUST compute ℚ deterministically per the [Quant Standard §3](../quant/Quant_Standard_v0.1.0.md):
 
 ```
 ℚ ≡ (C · E_baseline · T_std) / (E_consumed · T)
@@ -96,4 +96,4 @@ MUST each receive **identical 𝕌 and identical payment**, recording ℚ ≈ {0
 
 ## 11. Open items
 
-The measurement **boundary** standardization (5.2) and the **S2** vendor-locked power register (5.1); the per-task decentralized measurement procedure (the [Quant](../quant/Quant_Standard_v0.4.md) measurement protocol); the **efficiency-multiplier function** ([05](05-standing.md)); and a formal bound on Sealed-Power-Proof fraud ([08](08-security.md)). This document resolves the *recording* design for the energy-attestation open items in [03 §8](03-verification.md) and [00](00-overview.md); the *trustless-measurement substrate* they reference remains Open and gates the richest grades.
+The measurement **boundary** standardization (5.2) and the **S2** vendor-locked power register (5.1); the per-task decentralized measurement procedure (the [Quant](../quant/Quant_Standard_v0.1.0.md) measurement protocol); the **efficiency-multiplier function** ([05](05-standing.md)); and a formal bound on Sealed-Power-Proof fraud ([08](08-security.md)). This document resolves the *recording* design for the energy-attestation open items in [03 §8](03-verification.md) and [00](00-overview.md); the *trustless-measurement substrate* they reference remains Open and gates the richest grades.

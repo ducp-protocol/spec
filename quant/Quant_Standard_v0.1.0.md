@@ -2,7 +2,7 @@
 title: "The Quant (ℚ): A Standard for Measuring Computational Energy Efficiency"
 subtitle: "Open standard proposal · Companion to the Decentralized Universal Compute Protocol (DUCP)"
 author: "Pawan Singh · mr.singhpawan@gmail.com"
-date: "June 2026 · v0.4 (pre-release draft)"
+date: "June 2026 · v0.1.0 — Request for Comments & Collaboration"
 abstract: |
   We define the Quant (ℚ), a substrate-independent unit of computational energy efficiency: the quantity of useful information resolved per joule, normalized to a reference machine and to operating temperature, and benchmarked against the Landauer limit—the thermodynamic floor of irreversible computation. Unlike FLOPS or TOPS, which count operations without regard to information resolved or energy spent, ℚ is comparable across CPUs, GPUs, and emerging substrates, and it exposes how far a system operates from its physical bound. We give the operational (classical) definition usable on today's hardware, a bounded thermodynamic-efficiency ratio $\eta \in (0,1]$ that grounds the unit in Landauer's principle, two empirically motivated scaling laws (operating temperature and arithmetic precision), and a measurement protocol that confronts the central practical obstacle—that per-task energy cannot today be both confidential and trustlessly attested. We then describe how the standard couples to the DUCP protocol, where ℚ is recorded per task as a reward-neutral observable. Every claim in this proposal is grounded in established physics and is measurable on present or near-term hardware.
 geometry: "margin=1in"
@@ -124,7 +124,7 @@ The Quant is a substrate-independent, Landauer-normalized unit of computational 
 
 # Acknowledgment {-}
 
-An AI assistant was used for drafting, equation formatting, and figure generation; the technical content and the core ideas are the author's. This v0.4 revision narrows the proposal to its rigorous, empirically grounded core—removing earlier speculative material so that every claim is grounded in established physics and measurable on present or near-term hardware.
+An AI assistant was used for drafting, equation formatting, and figure generation; the technical content and the core ideas are the author's. This first public release (v0.1.0) publishes the rigorous, empirically grounded core developed through internal drafts—removing earlier speculative material so that every claim is grounded in established physics and measurable on present or near-term hardware.
 
 # Licensing & Ownership {-}
 

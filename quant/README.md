@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<p align="center"><em>A substrate-independent unit of computational energy efficiency, benchmarked against the Landauer limit.</em></p>
+<p align="center"><em>The Quant (ℚ): A Standard for Measuring Computational Energy Efficiency.</em></p>
 
 <p align="center">
   <a href="Quant_Standard_v0.1.0.pdf"><img src="https://img.shields.io/badge/Companion%3A%20The%20Quant%20(%E2%84%9A)-RFC%20v0.1.0-2E8B57?style=for-the-badge" alt="The Quant (ℚ) — RFC v0.1.0"></a>

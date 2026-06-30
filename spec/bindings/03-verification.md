@@ -1,14 +1,14 @@
-# Profile 0 — 03 · Verification (Sampled Re-execution)
+# Binding — 03 · Verification (Sampled Re-execution)
 
-- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parent [../03](../03-verification.md)
+- DUCP-SPEC 0.2.0 · Reference-node binding · See [README](README.md) · normative parent [../03](../03-verification.md)
 
-Profile 0 has exactly one verification tier — **sampled re-execution** — which the DVM assigns to every task at submit (`I-VERIFY-NOCHOICE`; TEE/ZK are reserved tiers). Because the DVM is deterministic ([02](02-dvm-and-metering.md)), re-execution is an **exact** check: re-run on the same `{module, input, benchmark}` and compare the `result_hash` and `ucu_count` byte-for-byte. Crate: `ducp-verification`.
+This binding has exactly one verification tier — **sampled re-execution** — which the DVM assigns to every task at submit (`I-VERIFY-NOCHOICE`; TEE/ZK are reserved tiers). Because the DVM is deterministic ([02](02-dvm-and-metering.md)), re-execution is an **exact** check: re-run on the same `{module, input, benchmark}` and compare the `result_hash` and `ucu_count` byte-for-byte. Crate: `ducp-verification`.
 
 ## 1. Optimistic acceptance (`I-VERIFY-RUNONCE`)
 
 **1.1** A task is executed **once** by its Provider. On `SubmitProof`, the task is provisionally accepted and proceeds to settle ([04](04-ledger-and-settlement.md)); it is **not** re-executed on the normal path.
 
-**1.2** Soundness comes from (a) a randomly **sampled fraction** of tasks being audited, and (b) **open challenge** during the clawback window — backed by bonded stake. This is the optimistic model: fraud is caught after the fact and punished so that it is net-negative in expectation (`I-VERIFY-DETER`). (Cheap per-task proof *checks*, as opposed to re-execution, arrive with the TEE/ZK tiers; Profile 0 deliberately uses the universal re-execution floor.)
+**1.2** Soundness comes from (a) a randomly **sampled fraction** of tasks being audited, and (b) **open challenge** during the clawback window — backed by bonded stake. This is the optimistic model: fraud is caught after the fact and punished so that it is net-negative in expectation (`I-VERIFY-DETER`). (Cheap per-task proof *checks*, as opposed to re-execution, arrive with the TEE/ZK tiers; This binding deliberately uses the universal re-execution floor.)
 
 **1.3** The metered `ucu_count` is determined by execution, not asserted on trust: the Requester escrows the declared ceiling `max_ucu`, the Provider reports the actual `ucu_count ≤ max_ucu` in the `ComputeProof`, settlement pays the actual count (refunding the remainder), and that count is exactly what sampling/challenge re-derives. A Provider that misreports `ucu_count` or `result_hash` fails the check.
 
@@ -49,7 +49,7 @@ On proven fraud for a task with payment `P` and work-issuance `W`:
 p · (P + W + F + value(standing_loss)) ≥ G        (audit) 
 ```
 
-and the always-present challenge path makes detection probability strictly greater than `p`. Profile-0 devnet defaults (provisional): `p = 0.10`, `F = 2·P`, `R = F/2`, bond_min = `0.25·P`, and a Standing loss that zeroes the offender's `sp`. These are tuned on devnet; the formal calibration is an open item ([../08 §6](../08-security.md)).
+and the always-present challenge path makes detection probability strictly greater than `p`. binding devnet defaults (provisional): `p = 0.10`, `F = 2·P`, `R = F/2`, bond_min = `0.25·P`, and a Standing loss that zeroes the offender's `sp`. These are tuned on devnet; the formal calibration is an open item ([../08 §6](../08-security.md)).
 
 ## 5. Interface (crate `ducp-verification`)
 
@@ -57,7 +57,7 @@ and the always-present challenge path makes detection probability strictly great
 pub enum VerifyOutcome { Accept, Fraud { expected: Hash, got: Hash } }
 
 pub trait Verifier {
-    /// Tier this verifier implements (Profile 0: SampledReexec).
+    /// Tier this verifier implements (binding: SampledReexec).
     fn tier(&self) -> VerificationTier;
     /// Re-derive and compare. For SampledReexec this re-executes via the DVM.
     fn check(&self, task: &TaskBody, proof: &ComputeProof, dvm: &dyn Dvm) -> VerifyOutcome;

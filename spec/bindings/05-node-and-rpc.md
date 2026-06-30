@@ -1,6 +1,6 @@
-# Profile 0 — 05 · Node, RPC, Parameters & Test Vectors
+# Binding — 05 · Node, RPC, Parameters & Test Vectors
 
-- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md)
+- DUCP-SPEC 0.2.0 · Reference-node binding · See [README](README.md)
 
 ## 1. Node components (`ducp-node`)
 
@@ -12,9 +12,9 @@
 | **ConsensusEngine** | Orders txs → blocks, applies the transition, commits `state_root` ([04 §6](04-ledger-and-settlement.md)). |
 | **Keystore** | Ed25519 keys; signs txs/blocks. |
 
-A node runs in one or more **roles** ([../00 §4](../00-overview.md)); a devnet is one `SingleSequencer` plus N worker nodes (Provider/Challenger). Workers reach the sequencer over RPC (no P2P gossip in Profile 0).
+A node runs in one or more **roles** ([../00 §4](../00-overview.md)); a devnet is one `SingleSequencer` plus N worker nodes (Provider/Challenger). Workers reach the sequencer over RPC (no P2P gossip in this binding).
 
-## 2. Routing (Profile 0)
+## 2. Routing (binding)
 
 `Submitted` tasks are offered to eligible Providers (those advertising the task's tier — all are `SampledReexec`-capable in P0). Selection is **Standing-preferred**: among available Providers, prefer higher Standing, breaking ties deterministically by `hash(task_id ‖ provider)`. (Energy-/efficiency-preferred routing activates with the energy substrate; in P0 `efficiency_mult = 1.0`, so Standing is the ordering signal.) Claiming is exclusive ([04 §2](04-ledger-and-settlement.md)).
 
@@ -40,7 +40,7 @@ Errors use JSON-RPC error objects; `Reject` reasons ([04 §2](04-ledger-and-sett
 
 ## 4. Parameters (devnet defaults — `ducp-governance`)
 
-All values are **provisional** and held as static config in Profile 0; at v1.0 they become governance parameters ([../07 §4.2](../07-governance.md)). They are **not** invariants.
+All values are **provisional** and held as static config in this binding; at v1.0 they become governance parameters ([../07 §4.2](../07-governance.md)). They are **not** invariants.
 
 | Param | Symbol | Devnet default |
 |---|---|---|

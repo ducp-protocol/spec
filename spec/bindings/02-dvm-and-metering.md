@@ -1,14 +1,14 @@
-# Profile 0 — 02 · The DVM (WebAssembly) & Metering
+# Binding — 02 · The DVM (WebAssembly) & Metering
 
-- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parent [../02](../02-dvm.md)
+- DUCP-SPEC 0.2.0 · Reference-node binding · See [README](README.md) · normative parent [../02](../02-dvm.md)
 
-The Profile 0 DVM is a **deterministic WebAssembly runtime** that executes a task once and derives its 𝕌 count by fuel metering. Reference runtime: **wasmtime** (Rust). Crate: `ducp-dvm`.
+The binding DVM is a **deterministic WebAssembly runtime** that executes a task once and derives its 𝕌 count by fuel metering. Reference runtime: **wasmtime** (Rust). Crate: `ducp-dvm`.
 
 ## 1. Accepted module format
 
-- A task program is a single Wasm module (`ContentId` → bytes). It MUST validate against the Wasm core spec under the **Profile 0 feature set**:
+- A task program is a single Wasm module (`ContentId` → bytes). It MUST validate against the Wasm core spec under the **binding Wasm feature set**:
   - **Allowed:** MVP core, `mutable-globals`, `sign-extension`, `nontrapping-float-to-int`, `bulk-memory`, `multi-value`.
-  - **Forbidden (Profile 0):** `threads`/atomics, `simd` (until canonicalization is specified), `reference-types`/`gc`, `exception-handling`, any nondeterministic proposal.
+  - **Forbidden (binding):** `threads`/atomics, `simd` (until canonicalization is specified), `reference-types`/`gc`, `exception-handling`, any nondeterministic proposal.
 - A module using a forbidden feature MUST be rejected at submit with `Reject(UnsupportedFeature)` — it never reaches metering.
 
 ## 2. Determinism profile (`I-DVM-DET`)
@@ -23,7 +23,7 @@ The runtime MUST be configured so execution is bit-identical across hosts:
 
 Given the same `{module, input, benchmark}`, every conforming DVM MUST produce the identical `output`, `result_hash`, and `ucu_count`.
 
-## 3. Host ABI (Profile 0)
+## 3. Host ABI (binding)
 
 A minimal, deterministic import namespace `ducp`:
 
@@ -40,7 +40,7 @@ A minimal, deterministic import namespace `ducp`:
 
 ## 4. Metering → 𝕌
 
-**4.1** The runtime meters execution in **fuel**: a deterministic, integer cost is charged per executed instruction from a fixed **cost table** `fuel_cost: Opcode → u64` (the per-IR metering function, [../01 §2.4](../01-unit.md)). Profile 0 ships a concrete table (provisional): most core ops cost `1`; memory ops and calls cost more; the table is content-hashed and recorded with the benchmark so it is reproducible.
+**4.1** The runtime meters execution in **fuel**: a deterministic, integer cost is charged per executed instruction from a fixed **cost table** `fuel_cost: Opcode → u64` (the per-IR metering function, [../01 §2.4](../01-unit.md)). This binding specifies a concrete table (provisional): most core ops cost `1`; memory ops and calls cost more; the table is content-hashed and recorded with the benchmark so it is reproducible.
 
 **4.2** Let `total_fuel` be the fuel consumed by the run. The **𝕌 count** is:
 
@@ -52,11 +52,11 @@ where `FUEL_PER_UCU` is a constant fixed by the **benchmark** (§5) and `UCU_SCA
 
 **4.3** The Provider's claimed `ucu_count` in the `ComputeProof` MUST equal the protocol's re-derivation; any mismatch is treated as fraud ([03](03-verification.md)).
 
-## 5. The benchmark (Profile 0)
+## 5. The benchmark (binding)
 
 - Exactly one benchmark is in effect, recorded on-ledger (`I-UNIT-ONEBENCH`): `{ version, fuel_cost_table_hash, FUEL_PER_UCU, e_std_nominal }`.
-- `FUEL_PER_UCU` is calibrated from a **canonical reference workload** (a fixed Wasm module + input shipped with the spec): run it under the cost table, obtain `fuel_ref`, and define `FUEL_PER_UCU = fuel_ref / UCU_REF` for a declared reference count `UCU_REF`. Profile 0 sets `UCU_REF` and thus `FUEL_PER_UCU` as a devnet constant (provisional).
-- `e_std_nominal` is a **nominal** standard-energy figure recorded for forward-compatibility; Profile 0 does **not** measure energy, so it does not affect `ucu_count` or rewards. Real calibration against the efficiency frontier is deferred ([../01 §4.5](../01-unit.md)).
+- `FUEL_PER_UCU` is calibrated from a **canonical reference workload** (a fixed Wasm module + input shipped with the spec): run it under the cost table, obtain `fuel_ref`, and define `FUEL_PER_UCU = fuel_ref / UCU_REF` for a declared reference count `UCU_REF`. This binding sets `UCU_REF` and thus `FUEL_PER_UCU` as a devnet constant (provisional).
+- `e_std_nominal` is a **nominal** standard-energy figure recorded for forward-compatibility; this binding does **not** measure energy, so it does not affect `ucu_count` or rewards. Real calibration against the efficiency frontier is deferred ([../01 §4.5](../01-unit.md)).
 - A benchmark change activates at an epoch boundary and every task records its `benchmark` version.
 
 ## 6. Limits & failure

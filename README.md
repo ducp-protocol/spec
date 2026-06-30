@@ -38,7 +38,7 @@ DUCP ships with a companion standard, the **Quant (ℚ)** — a substrate-indepe
 
 - [**The Quant (ℚ) — Standard v0.1.0 (PDF)**](quant/Quant_Standard_v0.1.0.pdf) · [Markdown source](quant/Quant_Standard_v0.1.0.md) · [companion overview](quant/) · **RFC**
 
-The Quant is published as an open **Request for Comments & Collaboration** — critique and validated benchmark data especially welcome; comment via [`quant`-labelled issues](https://github.com/ducp-protocol/spec/issues?q=label%3Aquant).
+The Quant is published as an open **Request for Comments & Collaboration** — critique and validated benchmark data especially welcome; comment via [`quant`-labelled issues](https://github.com/ducp-protocol/ducp-spec/issues?q=label%3Aquant).
 
 The two couple through reward-neutrality, a shared Benchmark Node baseline, the **Sealed Power Proof** (how ℚ is recorded trustlessly when per-task energy can't be both confidential and attested), and a joint vendor-locked-power-register hardware ask. See [`quant/`](quant/).
 

@@ -16,7 +16,7 @@ The Quant is defined to stand on its own. It is usable by anyone comparing effic
 
 - [**The Quant (ℚ): A Standard for Measuring Computational Energy Efficiency — v0.1.0 (PDF)**](Quant_Standard_v0.1.0.pdf) — current
 - [Markdown source](Quant_Standard_v0.1.0.md) — editable source
-- [Changelog](CHANGELOG.md) · [Release `quant-v0.1.0`](https://github.com/ducp-protocol/spec/releases/tag/quant-v0.1.0)
+- [Changelog](CHANGELOG.md) · [Release `quant-v0.1.0`](https://github.com/ducp-protocol/ducp-spec/releases/tag/quant-v0.1.0)
 - Prior drafts (provenance): [`releases/`](releases/) · author-local [`archive/companion-docs/Quant_Standard_Proposal_v0.3.pdf`](../archive/companion-docs/Quant_Standard_Proposal_v0.3.pdf) (not published)
 
 ## Status
@@ -41,7 +41,7 @@ DUCP depends only on the Quant's classical, Landauer-bounded core (§§3–6 of 
 
 This is a **request for comments and collaboration** — critique, especially adversarial, is welcome.
 
-- **Comment or propose:** open an issue in the [DUCP spec repo](https://github.com/ducp-protocol/spec/issues) with the [`quant`](https://github.com/ducp-protocol/spec/issues?q=label%3Aquant) label, or email mr.singhpawan@gmail.com.
+- **Comment or propose:** open an issue in the [DUCP spec repo](https://github.com/ducp-protocol/ducp-spec/issues) with the [`quant`](https://github.com/ducp-protocol/ducp-spec/issues?q=label%3Aquant) label, or email mr.singhpawan@gmail.com.
 - **Where help matters most** — the paper's open work:
   - validated benchmark entries with NIST-traceable power and temperature logs (MLPerf-style runs);
   - empirical regression on the arithmetic-precision scaling law;

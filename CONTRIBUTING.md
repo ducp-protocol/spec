@@ -9,7 +9,7 @@ contributing.
 
 ## Local workspace
 
-DUCP spans multiple repositories (`spec`, `ducp-node-rs`, and the org profile).
+DUCP spans multiple repositories (`ducp-spec`, `ducp-node-rs`, and the org profile).
 Clone them as **siblings** under one parent folder — see **[WORKSPACE.md](WORKSPACE.md)**
 for the recommended layout and [`scripts/setup-workspace.sh`](scripts/setup-workspace.sh)
 to bootstrap sibling checkouts.

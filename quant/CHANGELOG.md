@@ -32,4 +32,4 @@ Collaboration**.
 - Public history begins at **0.1.0**. Prior internal design iterations (through
   internal draft v0.4) are documented in [`CHANGELOG.md`](CHANGELOG.md); prior companion
   proposal v0.3 remains in the author-local [`archive/`](../archive/) (not published).
-- GitHub release tag: **`quant-v0.1.0`** on the [spec repository](https://github.com/ducp-protocol/spec).
+- GitHub release tag: **`quant-v0.1.0`** on the [spec repository](https://github.com/ducp-protocol/ducp-spec).

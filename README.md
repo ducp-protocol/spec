@@ -12,6 +12,11 @@
 > (DP-0001). A design seeking scrutiny and collaborators, not a shipped system.
 > Open to contribution; owned and stewarded by its author through the pre-1.0 phase.
 
+<p align="center">
+  <a href="whitepaper/DUCP_White_Paper_v0.2.0.pdf"><img src="https://img.shields.io/badge/Read%20the%20White%20Paper-v0.2.0-1F4E79?style=for-the-badge" alt="Read the White Paper (v0.2.0)"></a>
+  <a href="quant/Quant_Standard_v0.1.0.pdf"><img src="https://img.shields.io/badge/Companion%3A%20The%20Quant%20(%E2%84%9A)-RFC%20v0.1.0-2E8B57?style=for-the-badge" alt="The Quant (ℚ) — RFC v0.1.0"></a>
+</p>
+
 **An open, trustless protocol that mobilizes the world's compute into one market and makes it a democratized, sustainable abundance — where verified work is the currency, efficiency is rewarded by the market, and governance is earned reputation rather than wealth.**
 
 DUCP exists to accelerate technological evolution and the advancement of intelligence by making compute — the resource all of it runs on — a **democratized, sustainable abundance**: open to anyone to supply or use, plentiful rather than gated, and efficient rather than wasteful. Its central *mechanism* is to make verified computation itself a real, work-backed currency: the **Universal Compute Unit (𝕌, ticker UCU, spoken "the U")** is both the atomic measure of computation and the native currency — work delivered is value minted, with no separate token. One 𝕌 is a quantity of *information processed*, its scale fixed by a reference benchmark (information per standard unit of energy). The same work earns the same 𝕌 on any hardware, and **efficiency is rewarded in the market layer — never baked into the unit.** The currency serves the purpose; it is not the purpose.

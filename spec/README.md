@@ -23,9 +23,17 @@ This is a **Draft**. Requirements are normative where stated with RFC-2119 keywo
 
 All documents are currently **Draft**. Each ends with an **Open items** section listing what remains.
 
-## Implementation (build-ready)
+## Bindings (reference-node)
 
-A concrete **Profile 0** (MVP / devnet) implementation specification lives in **[`implementation/`](implementation/)**. It pins the buildable choices — **WebAssembly** IR, **single-sequencer devnet**, **sampled re-execution** — preserves every invariant above, puts TEE/ZK/energy/BFT behind interfaces, and maps directly onto the [`ducp-node-rs`](https://github.com/ducp-protocol/ducp-node-rs) crates with a milestone roadmap (M0–M6) and conformance test vectors. Start at [`implementation/README.md`](implementation/README.md). This is the document to build the reference node from.
+The **[reference-node binding specification](bindings/)** pins the concrete engineering choices for the first interoperable node — **WebAssembly** IR, **single-sequencer devnet**, **sampled re-execution** — while preserving every invariant above and putting TEE/ZK/energy/BFT behind interfaces. It includes a milestone roadmap (M0–M6), conformance test vectors, and a crate map for the [`ducp-node-rs`](https://github.com/ducp-protocol/ducp-node-rs) reference implementation. Start at [`bindings/README.md`](bindings/README.md).
+
+| Doc | Title |
+|---|---|
+| [bindings/01](bindings/01-data-model.md) | Data Model & Encoding |
+| [bindings/02](bindings/02-dvm-and-metering.md) | The DVM (WebAssembly) & Metering |
+| [bindings/03](bindings/03-verification.md) | Verification (Sampled Re-execution) |
+| [bindings/04](bindings/04-ledger-and-settlement.md) | Ledger, Settlement & Consensus |
+| [bindings/05](bindings/05-node-and-rpc.md) | Node, RPC, Parameters & Test Vectors |
 
 ## How to contribute
 

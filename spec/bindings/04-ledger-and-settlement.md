@@ -1,6 +1,6 @@
-# Profile 0 — 04 · Ledger, Settlement & Consensus
+# Binding — 04 · Ledger, Settlement & Consensus
 
-- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md) · normative parents [../04](../04-economics.md), [../07](../07-governance.md)
+- DUCP-SPEC 0.2.0 · Reference-node binding · See [README](README.md) · normative parents [../04](../04-economics.md), [../07](../07-governance.md)
 
 The ledger is a deterministic state machine; the consensus engine orders transactions into blocks and replicates the same transition on every node. Crates: `ducp-ledger`, `ducp-consensus`.
 
@@ -43,7 +43,7 @@ Let `u = proof.ucu_count`, escrow held `= max_ucu + fee`. All effects below MUST
 2. **Refund** — `max_ucu - u` from `requester.escrowed → requester.balance`.
 3. **Validator fee** — `fee` from `requester.escrowed → fee_pool` (Validator/sequencer).
 4. **Work-issuance** — mint `W = issuance(u)` to `provider.balance`; `supply.minted += W` (`I-ECON-ONEMINT`). `issuance(u) = ⌊issuance_rate · u⌋`, with `issuance_rate` set **below the real resource cost** of the work (`I-SEC-WASHBOUND`, [../08 §3.1](../08-security.md)).
-5. **Standing** — `standing[provider].sp += accrual(u)` where `accrual(u) = ⌊sp_rate · u · efficiency_mult⌋`; Profile 0 `efficiency_mult = 1.0` (no energy measurement) and `sp_rate ≈ 1 SP per 1 𝕌` ([../05 §2.1](../05-standing.md)).
+5. **Standing** — `standing[provider].sp += accrual(u)` where `accrual(u) = ⌊sp_rate · u · efficiency_mult⌋`; This binding sets `efficiency_mult = 1.0` (no energy measurement) and `sp_rate ≈ 1 SP per 1 𝕌` ([../05 §2.1](../05-standing.md)).
 6. **Bond lock** — `provider.bonded` (the claim stake) stays locked until `clawback_until = epoch + CLAWBACK_EPOCHS`.
 7. Write `Receipt`; set `status: Settled` (terminal for the ledger).
 
@@ -75,7 +75,7 @@ pub trait ConsensusEngine {
 }
 ```
 
-**Profile 0 — `SingleSequencer`.** One designated node (`Block.proposer`) orders admitted txs (FIFO by arrival, ties by `TxId`), applies the §2/§3 transition in order, and computes `state_root = hash(canonical(State))` (provisional: hash of canonically-serialized sorted maps; a Merkle commitment replaces it later). Other nodes **replay** `commit` and MUST reach the identical `state_root` — this is state-machine replication, so the devnet is verifiable even with one proposer. A BFT engine (Cosmos/Substrate/custom) is a later `impl ConsensusEngine` with no change to §§1–5.
+**Binding — `SingleSequencer`.** One designated node (`Block.proposer`) orders admitted txs (FIFO by arrival, ties by `TxId`), applies the §2/§3 transition in order, and computes `state_root = hash(canonical(State))` (provisional: hash of canonically-serialized sorted maps; a Merkle commitment replaces it later). Other nodes **replay** `commit` and MUST reach the identical `state_root` — this is state-machine replication, so the devnet is verifiable even with one proposer. A BFT engine (Cosmos/Substrate/custom) is a later `impl ConsensusEngine` with no change to §§1–5.
 
 ## 7. Invariants & open items
 

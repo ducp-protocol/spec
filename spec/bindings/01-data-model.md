@@ -1,18 +1,18 @@
-# Profile 0 — 01 · Data Model & Encoding
+# Binding — 01 · Data Model & Encoding
 
-- DUCP-SPEC 0.2.0 · Profile 0 · See [README](README.md)
+- DUCP-SPEC 0.2.0 · Reference-node binding · See [README](README.md)
 
 Types are shown in Rust syntax for precision; they define the **canonical data model** every conforming node shares (crate `ducp-types`). Field encodings are normative for interoperability.
 
 ## 1. Encoding & hashing conventions
 
-- **Canonical bytes.** Every hashed or signed structure MUST have a single canonical byte encoding. Profile 0 uses deterministic length-prefixed encoding (provisional: `borsh`); fields are encoded in declaration order. No floats appear in any hashed structure.
-- **Hash.** `Hash = [u8; 32]`, BLAKE3-256 of the canonical bytes (P0-provisional).
+- **Canonical bytes.** Every hashed or signed structure MUST have a single canonical byte encoding. This binding uses deterministic length-prefixed encoding (provisional: `borsh`); fields are encoded in declaration order. No floats appear in any hashed structure.
+- **Hash.** `Hash = [u8; 32]`, BLAKE3-256 of the canonical bytes (binding-provisional).
 - **Content addressing.** `ContentId = Hash` of a payload's canonical bytes. Large payloads (inputs/outputs) MAY live off-ledger; only their `ContentId` is on-ledger.
 - **Identity & signatures.** `Identity = PublicKey` (Ed25519, 32 bytes, P0). `Signature = [u8; 64]` (Ed25519). Every transaction MUST be signed by its author.
-- **Amounts.** `Ucu = u128` base units. Profile 0 fixes **1 𝕌 = 10⁹ base units** (`UCU_DECIMALS = 9`); this precision is P0-provisional pending the locked value ([../01 §1.4](../01-unit.md)). All monetary math is integer; no rounding except where explicitly specified.
+- **Amounts.** `Ucu = u128` base units. This binding fixes **1 𝕌 = 10⁹ base units** (`UCU_DECIMALS = 9`); this precision is binding-provisional pending the locked value ([../01 §1.4](../01-unit.md)). All monetary math is integer; no rounding except where explicitly specified.
 - **Standing.** `Sp = i128` base points, same scale as `Ucu`.
-- **Time.** `Epoch = u64`. Profile 0 has no wall-clock dependence in metering; epochs advance per block batch (config).
+- **Time.** `Epoch = u64`. This binding has no wall-clock dependence in metering; epochs advance per block batch (config).
 
 ## 2. Identifiers
 
@@ -34,7 +34,7 @@ pub type BenchmarkVersion = u32;
 ```rust
 /// What a Requester asks for. Hashed → TaskId.
 pub struct TaskBody {
-    pub ir: IrId,                  // Profile 0: IrId::WASM
+    pub ir: IrId,                  // binding: IrId::WASM
     pub program: ContentId,        // the Wasm module bytes
     pub input: ContentId,          // canonical input payload
     pub limits: Limits,            // declared resource caps
@@ -45,7 +45,7 @@ pub struct TaskBody {
     pub nonce: u64,                // Requester-unique
 }
 
-pub enum IrId { WASM = 0 }         // Profile 0 has exactly one IR
+pub enum IrId { WASM = 0 }         // This binding has exactly one IR
 
 pub struct Limits {
     pub max_ucu: Ucu,              // hard ceiling on metered work
@@ -74,7 +74,7 @@ pub struct Submission {
 
 pub enum TaskStatus { Submitted, Matched, Executing, Verified, Settled, Failed }
 
-/// The Provider's evidence (Profile 0: sampled-reexec tier).
+/// The Provider's evidence (binding: sampled-reexec tier).
 pub struct ComputeProof {
     pub task: TaskId,
     pub provider: Identity,
@@ -156,4 +156,4 @@ pub struct Block {
 
 ## 8. Open / provisional
 
-Codec choice (`borsh`), hash (BLAKE3), signature scheme (Ed25519), and `UCU_DECIMALS = 9` are Profile-0 provisional and may be fixed differently at 1.0; the **shapes and invariants** above are stable.
+Codec choice (`borsh`), hash (BLAKE3), signature scheme (Ed25519), and `UCU_DECIMALS = 9` are binding-provisional and may be fixed differently at 1.0; the **shapes and invariants** above are stable.

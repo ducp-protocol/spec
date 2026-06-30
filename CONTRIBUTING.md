@@ -11,8 +11,7 @@ contributing.
 
 DUCP spans multiple repositories (`ducp-spec`, `ducp-node-rs`, and the org profile).
 Clone them as **siblings** under one parent folder — see **[WORKSPACE.md](WORKSPACE.md)**
-for the recommended layout and [`scripts/setup-workspace.sh`](scripts/setup-workspace.sh)
-to bootstrap sibling checkouts.
+for the recommended layout.
 
 ## How DUCP is developed right now
 

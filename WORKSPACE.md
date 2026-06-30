@@ -28,13 +28,6 @@ git clone git@github.com:ducp-protocol/ducp-node-rs.git
 git clone git@github.com:ducp-protocol/.github.git org-profile
 ```
 
-Or run the helper script from a `ducp-spec/` clone:
-
-```bash
-./scripts/setup-workspace.sh            # creates ../ducp-node-rs and ../org-profile
-./scripts/setup-workspace.sh ~/Projects/DUCP   # explicit workspace root
-```
-
 ## Day-to-day workflow
 
 - **Spec / paper / Quant changes** → commit in `ducp-spec/`

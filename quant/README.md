@@ -1,6 +1,11 @@
-# The Quant (ℚ) — Companion Standard
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../brand/quant-logo-horizontal-dark.png">
+    <img alt="The Quant (ℚ) — Computational Energy Efficiency" src="../brand/quant-logo-horizontal.png" width="540">
+  </picture>
+</p>
 
-**A substrate-independent unit of computational energy efficiency, benchmarked against the Landauer limit.**
+<p align="center"><em>A substrate-independent unit of computational energy efficiency, benchmarked against the Landauer limit.</em></p>
 
 <p align="center">
   <a href="Quant_Standard_v0.1.0.pdf"><img src="https://img.shields.io/badge/Companion%3A%20The%20Quant%20(%E2%84%9A)-RFC%20v0.1.0-2E8B57?style=for-the-badge" alt="The Quant (ℚ) — RFC v0.1.0"></a>

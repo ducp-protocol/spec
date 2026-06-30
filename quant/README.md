@@ -2,6 +2,10 @@
 
 **A substrate-independent unit of computational energy efficiency, benchmarked against the Landauer limit.**
 
+<p align="center">
+  <a href="Quant_Standard_v0.1.0.pdf"><img src="https://img.shields.io/badge/Companion%3A%20The%20Quant%20(%E2%84%9A)-RFC%20v0.1.0-2E8B57?style=for-the-badge" alt="The Quant (ℚ) — RFC v0.1.0"></a>
+</p>
+
 The Quant is DUCP's **companion standard**. Where the protocol's native unit **𝕌 (the Universal Compute Unit)** measures *how much* useful work was delivered, the Quant **ℚ** measures *how cleanly* it was delivered — the useful information resolved per joule, normalized to a reference machine and to operating temperature. Together they form a **two-axis model of computation**: 𝕌 is the quantity axis (metered and rewarded), ℚ is the quality axis (measured and made legible, **never** affecting payment).
 
 The Quant is defined to stand on its own. It is usable by anyone comparing efficiency across CPUs, GPUs, and emerging substrates — Green500 entrants, sustainability-bound buyers, and hardware vendors — independent of whether they use DUCP. DUCP is its first reference adopter.

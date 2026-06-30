@@ -7,6 +7,13 @@ questions, and proposals are all genuinely welcome — especially adversarial on
 Please read this guide and the [Code of Conduct](CODE_OF_CONDUCT.md) before
 contributing.
 
+## Local workspace
+
+DUCP spans multiple repositories (`spec`, `ducp-node-rs`, and the org profile).
+Clone them as **siblings** under one parent folder — see **[WORKSPACE.md](WORKSPACE.md)**
+for the recommended layout and [`scripts/setup-workspace.sh`](scripts/setup-workspace.sh)
+to bootstrap sibling checkouts.
+
 ## How DUCP is developed right now
 
 DUCP is in its **pre-1.0 phase** (see "Status of This Document" in the white

@@ -3,9 +3,8 @@
 # editorial review. Kept locally for reference; never published.
 archive/
 
-# --- Separate repos kept in this folder locally, not part of the spec repo ---
-org-profile/
-ducp-node-rs/
+# Sibling repos (ducp-node-rs, org-profile) live next to this checkout under the
+# workspace parent — see WORKSPACE.md. Do not nest them inside the spec repo.
 
 # --- LibreOffice / Microsoft Office lock & temporary files ---
 .~lock.*#

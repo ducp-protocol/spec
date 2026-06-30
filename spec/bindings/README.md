@@ -1,16 +1,17 @@
-# DUCP Reference Node — Implementation Specification (Profile 0)
+# Reference-Node Binding Specification
 
-- Spec: **DUCP-SPEC 0.2.0** · Implementation **Profile 0** (MVP / devnet)
-- Status: **Draft, build-ready.** Defines a concrete, buildable subset of DUCP sufficient to stand up a working node and a devnet/testnet, end to end (submit → execute → verify → settle) with real 𝕌 and Standing accounting.
-- Companion: the normative spec ([../00–08](../00-overview.md)) defines *what must hold*; this profile defines *what to build first* without violating it.
+- **DUCP-SPEC 0.2.0** · Reference-node binding (MVP / devnet)
+- **Status:** Draft, build-ready. Pins the concrete engineering choices needed to stand up a working node and a devnet/testnet, end to end (submit → execute → verify → settle) with real 𝕌 and Standing accounting.
+- **Companion:** the normative protocol specification ([../00–09](../00-overview.md)) defines *what must hold*; this binding defines the *pinned choices* for the first interoperable reference node without violating those requirements.
+- **Reference implementation:** [`ducp-node-rs`](https://github.com/ducp-protocol/ducp-node-rs) implements this binding in Rust.
 
-## 1. What Profile 0 is
+## 1. What this binding specifies
 
-Profile 0 is the **minimum coherent node**: it accepts a task, executes it deterministically, verifies it by sampled re-execution, and settles it on a single-sequencer devnet ledger that mints 𝕌 by work-issuance and updates Standing.
+This binding describes the **minimum coherent reference node**: it accepts a task, executes it deterministically, verifies it by sampled re-execution, and settles it on a single-sequencer devnet ledger that mints 𝕌 by work-issuance and updates Standing.
 
-**Locked engineering choices (Profile 0):**
+**Pinned engineering choices:**
 
-| Concern | Profile 0 choice | Interface for later |
+| Concern | Binding choice | Interface for later |
 |---|---|---|
 | IR / execution | **WebAssembly**, deterministic profile, fuel-metered (wasmtime) | `Ir` registry → add RISC-V / tensor IRs |
 | Verification | **Sampled re-execution** + open challenge | `Verifier` trait → add TEE, ZK |
@@ -19,11 +20,11 @@ Profile 0 is the **minimum coherent node**: it accepts a task, executes it deter
 | Governance | **Static config** set by the maintainer | `07` on-chain chambers at v1.0 |
 | Energy / efficiency | **Not measured** (efficiency multiplier = 1.0) | `EnergyAttestor` trait → later |
 
-**Invariants preserved (from [../00–08](../00-overview.md)):** `I-UNIT-SAMEWORK`, `I-UNIT-ENERGYFREE`, `I-UNIT-DERIVED`, `I-UNIT-ONEBENCH`, `I-DVM-DET`, `I-VERIFY-RUNONCE`, `I-VERIFY-NOCHOICE`, `I-VERIFY-DETER`, `I-ECON-ONEMINT`, `I-ECON-TRANSFER`, `I-ECON-FINAL`, `I-ECON-BACKED`, `I-STAND-NOXFER`, `I-STAND-NOTMONEY`, `I-LC-ONCE`. Profile 0 MUST NOT violate any of these.
+**Invariants preserved (from [../00–09](../00-overview.md)):** `I-UNIT-SAMEWORK`, `I-UNIT-ENERGYFREE`, `I-UNIT-DERIVED`, `I-UNIT-ONEBENCH`, `I-DVM-DET`, `I-VERIFY-RUNONCE`, `I-VERIFY-NOCHOICE`, `I-VERIFY-DETER`, `I-ECON-ONEMINT`, `I-ECON-TRANSFER`, `I-ECON-FINAL`, `I-ECON-BACKED`, `I-STAND-NOXFER`, `I-STAND-NOTMONEY`, `I-LC-ONCE`. A conforming node MUST NOT violate any of these.
 
-## 2. Out of scope for Profile 0
+## 2. Out of scope for this binding
 
-TEE and ZK tiers; trustless energy attestation and the efficiency bonus; production BFT consensus and P2P networking; multiple IRs; on-chain governance; auction/surge pricing; data-availability sharding. Each is represented by a trait (above) so it can be added without reshaping Profile 0. Until then, Standing's efficiency multiplier is fixed at 1.0 (no measurement, no bonus — consistent with [../05 §2.2](../05-standing.md)).
+TEE and ZK tiers; trustless energy attestation and the efficiency bonus; production BFT consensus and P2P networking; multiple IRs; on-chain governance; auction/surge pricing; data-availability sharding. Each is represented by a trait (above) so it can be added without reshaping this binding. Until then, Standing's efficiency multiplier is fixed at 1.0 (no measurement, no bonus — consistent with [../05 §2.2](../05-standing.md)).
 
 ## 3. Architecture & crate map
 
@@ -63,6 +64,16 @@ Two crates are recommended additions to the existing `ducp-node-rs` scaffold: **
 | **M5** | Clawback window + finality | Bonded stake locked for window; fraud proven in-window → clawback + offsetting burn; settled tx never rewritten ([04](04-ledger-and-settlement.md)). |
 | **M6** | Devnet + dogfood | Multi-node devnet (1 sequencer + N workers); a sample beachhead workload runs and settles repeatedly. |
 
-## 5. Conformance (Profile 0)
+## 5. Conformance
 
-A Profile 0 node is conforming when, for the same task and inputs, it (a) derives the **identical 𝕌 count** as any other conforming node, (b) produces the **bit-identical result hash**, and (c) reaches the **identical settlement and Standing outcome**. Golden test vectors are listed in [05 §5](05-node-and-rpc.md).
+A node conforming to this binding MUST, for the same task and inputs, (a) derive the **identical 𝕌 count** as any other conforming node, (b) produce the **bit-identical result hash**, and (c) reach the **identical settlement and Standing outcome**. Golden test vectors are listed in [05 §5](05-node-and-rpc.md).
+
+## Documents
+
+| Doc | Title |
+|---|---|
+| [01](01-data-model.md) | Data Model & Encoding |
+| [02](02-dvm-and-metering.md) | The DVM (WebAssembly) & Metering |
+| [03](03-verification.md) | Verification (Sampled Re-execution) |
+| [04](04-ledger-and-settlement.md) | Ledger, Settlement & Consensus |
+| [05](05-node-and-rpc.md) | Node, RPC, Parameters & Test Vectors |
